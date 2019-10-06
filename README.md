@@ -69,7 +69,7 @@ Raises:
     popt, pcov = curve_fit(func, xdata, ydata)
     plt.plot(xdata, func(xdata, *popt), 'r-',label='fit: a=%5.3f, b=%5.3f, c=%5.3f' % tuple(popt))
 
-    Constrain the optimization to the region of 0 <= a <= 3, 0 <= b <= 1 and 0 <= c <= 0.5:
+Constrain the optimization to the region of 0 <= a <= 3, 0 <= b <= 1 and 0 <= c <= 0.5:
 
     popt, pcov = curve_fit(func, xdata, ydata, bounds=(0, [3., 1., 0.5]))
     plt.plot(xdata, func(xdata, *popt), 'g--',label='fit: a=%5.3f, b=%5.3f, c=%5.3f' % tuple(popt))
